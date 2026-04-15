@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROSA Vision Coach</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="app-frame">
+      <section class="game-card" aria-label="ROSA Vision Coach">
+        <div class="game-card__main">
+          <div class="scenario-bar">
+            <div class="brand-lockup">
+              <img
+                class="brand-lockup__logo"
+                src="../../../rosa/MARKETING/logos/rosa%20padel/rosa_padel_dark_mode.png"
+                alt="ROSA Padel"
+              >
+              <div>
+                <p class="brand-lockup__eyebrow">ROSA Vision Coach</p>
+                <p class="brand-lockup__subcopy">Tactical training scenarios</p>
+              </div>
+            </div>
+            <div class="scenario-bar__title-group">
+              <p class="scenario-bar__label" id="scenarioCategory"></p>
+              <h2 id="scenarioTitle"></h2>
+            </div>
+            <div class="scenario-bar__count" id="scenarioCounter"></div>
+          </div>
+
+          <div class="board-layout">
+            <section class="court-panel">
+              <div class="court" id="court">
+                <div class="court__surface"></div>
+                <div class="court__grid"></div>
+                <div class="court__net"></div>
+                <svg class="court__overlay" id="overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+                <div class="court__players" id="playersLayer"></div>
+                <div class="court__markers" id="markersLayer"></div>
+              </div>
+            </section>
+
+            <aside class="status-rail" aria-label="Demo status">
+              <div class="status-rail__avatar" aria-hidden="true"></div>
+              <div class="status-rail__metric">
+                <span class="status-rail__icon">HOT</span>
+                <span id="streakValue">0</span>
+              </div>
+              <div class="status-rail__progress">
+                <div class="status-rail__progress-fill" id="progressFill"></div>
+              </div>
+              <div class="status-rail__score" id="ratingValue">1200</div>
+            </aside>
+          </div>
+
+          <section class="prompt-card" id="promptCard">
+            <p class="prompt-card__kicker" id="promptKicker"></p>
+            <p class="prompt-card__question" id="promptText"></p>
+            <p class="prompt-card__context" id="promptContext"></p>
+            <div class="prompt-card__feedback" id="feedbackBox" hidden></div>
+          </section>
+
+          <section class="controls">
+            <div class="option-row" id="optionButtons" aria-label="Answer choices"></div>
+            <div class="action-row">
+              <button type="button" class="action-button action-button--ghost" id="restartButton">Restart</button>
+              <button type="button" class="action-button action-button--primary" id="confirmButton" disabled>Confirm</button>
+              <button type="button" class="action-button action-button--primary" id="nextButton" hidden>Next</button>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
