@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Pretendard";
-  src: url("../../../rosa/MARKETING/font/pretendard/public/variable/PretendardVariable.ttf") format("truetype");
+  src: url("./assets/fonts/PretendardVariable.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -308,7 +308,7 @@ body {
   height: 46px;
   border-radius: 18px;
   background:
-    url("../../../rosa/MARKETING/logos/icon%20only/light_mode_icon.svg") center/66% no-repeat,
+    url("./assets/logos/light_mode_icon.svg") center/66% no-repeat,
     linear-gradient(135deg, rgba(228, 0, 124, 0.18), rgba(255, 255, 255, 0.06)),
     rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(228, 0, 124, 0.2);
@@ -876,39 +876,109 @@ body {
 }
 
 @media (max-width: 720px) {
+  .page-shell {
+    padding: 6px;
+  }
+
   .game-card {
-    border-radius: 24px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .game-card__main {
+    gap: 8px;
+  }
+
+  .scenario-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand count"
+      "title title";
+    gap: 6px 8px;
+    align-items: center;
   }
 
   .board-layout {
-    grid-template-columns: minmax(0, 1fr) 62px;
+    grid-template-columns: minmax(0, 1fr) 52px;
+    gap: 8px;
   }
 
   .court {
-    width: min(100%, 420px);
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  .brand-lockup {
+    grid-area: brand;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .brand-lockup__logo {
+    width: 76px;
+  }
+
+  .brand-lockup__subcopy {
+    display: none;
+  }
+
+  .brand-lockup__eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+
+  .scenario-bar__title-group {
+    grid-area: title;
+    gap: 2px;
+  }
+
+  .scenario-bar h2 {
+    font-size: 1.02rem;
+    line-height: 1.05;
+  }
+
+  .scenario-bar__count {
+    grid-area: count;
+    min-width: 64px;
+    padding: 6px 10px;
+    align-self: start;
+  }
+
+  .scenario-bar__label {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
   }
 
   .status-rail {
     border-radius: 22px;
-    padding: 8px 6px;
-    gap: 10px;
+    padding: 8px 4px;
+    gap: 8px;
   }
 
   .status-rail__avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 14px;
-    font-size: 0.84rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
   }
 
   .status-rail__progress {
-    width: 18px;
-    min-height: 108px;
+    width: 14px;
+    min-height: 96px;
   }
 
   .status-rail__score {
-    min-width: 50px;
-    font-size: 1.4rem;
+    min-width: 42px;
+    padding: 8px 4px;
+    font-size: 1.15rem;
+  }
+
+  .player {
+    width: 12.6%;
+  }
+
+  .ball {
+    width: 5.4%;
   }
 
   .marker {
@@ -929,7 +999,7 @@ body {
   }
 
   .prompt-card {
-    padding: 12px 14px;
+    padding: 9px 11px;
     border-radius: 20px;
   }
 
@@ -938,17 +1008,18 @@ body {
   }
 
   .prompt-card__question {
-    font-size: 1rem;
+    font-size: 0.96rem;
+    line-height: 1.16;
   }
 
   .prompt-card__context,
   .feedback-text {
-    font-size: 0.85rem;
-    line-height: 1.35;
+    font-size: 0.8rem;
+    line-height: 1.28;
   }
 
   .option-button {
-    min-height: 54px;
+    min-height: 52px;
     padding: 9px 10px;
   }
 

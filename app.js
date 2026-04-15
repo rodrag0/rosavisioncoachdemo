@@ -115,8 +115,8 @@ const PUZZLES = [
         id: "A",
         title: "Rulo",
         short: "Rulo",
-        x: 79,
-        y: 20,
+        x: 80,
+        y: 13,
         explanation:
           "Rulos in this area reduce success angle, increasing unforced error likeliness. Rulo is better for the recommended area. Vibora or bandeja suggested.",
         path: { end: { x: 82, y: 18 }, bend: 18 }
@@ -125,8 +125,8 @@ const PUZZLES = [
         id: "B",
         title: "Bandeja or vibora",
         short: "Bandeja / vibora",
-        x: 50,
-        y: 17,
+        x: 46,
+        y: 13,
         explanation: "From this zone, vibora or bandeja is the suggested overhead.",
         path: { end: { x: 50, y: 17 }, bend: 0 }
       }
